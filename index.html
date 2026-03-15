@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facilitando seu jejum</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                dark: '#f3f4f6',      // Light gray background (replaces the darkest green)
+                card: '#ffffff',      // Pure white cards (replaces the card green)
+                'card-hover': '#f9fafb', // Lighter white/gray for hover
+                gold: '#0a6c38',      // Main Green (replaces gold accents)
+                'gold-light': '#148f4e', // Lighter green
+                text: '#111827',         // Black/Dark Gray text for contrast
+                yellow: '#facc15',       // Yellow accents
+                red: '#ef4444'           // Red accents
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --brand-dark: #f3f4f6;
+            --brand-card: #ffffff;
+            --brand-gold: #0a6c38;
+            --brand-text: #111827;
+        }
+        body { 
+            font-family: 'Inter', sans-serif; 
+            /* Soft light background with minimal pattern */
+            background-color: var(--brand-dark);
+            background-image: radial-gradient(rgba(10, 108, 56, 0.05) 1px, transparent 1px);
+            background-size: 24px 24px;
+            -webkit-tap-highlight-color: transparent;
+            color: var(--brand-text);
+        }
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.90);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(10, 108, 56, 0.1);
+        }
+        @keyframes pulse-live {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.2); opacity: 0.8; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        .live-dot {
+            animation: pulse-live 2s infinite;
+        }
+        /* Custom scrollbar para parecer app nativo */
+        ::-webkit-scrollbar {
+            width: 0px;
+            background: transparent;
+        }
+    </style>
+</head>
+<body class="text-brand-text bg-brand-dark antialiased">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+</body>
+</html>

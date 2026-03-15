@@ -1,0 +1,7 @@
+{
+  "name": "Facilitando Jejum",
+  "description": "App completo de jejum intermitente com guias, cardápios, acompanhamento de progresso e comunidade exclusiva para alunos.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
